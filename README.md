@@ -1,6 +1,6 @@
 # Information
 
-Thank you for taking this challenge! [CS Games](https://2020.csgames.org/) is an event that the [Computer Science Society](https://css.uwindsor.ca) sponsors annually. We send two teams of ten students (20 total) to compete in a series of competitions and have a great time. You are currently taking the challenge for our **Team B**, which is for the less experienced members. **By completing this challenge, you will only be considered for Team B**.
+Thank you for taking this challenge! [CS Games](https://2023.csgames.org/) is an event that the [Computer Science Society](https://css.uwindsor.ca) sponsors annually. We send two teams of ten students (20 total) to compete in a series of competitions and have a great time. You are currently taking the challenge for our **Team B**, which is for the less experienced members. **By completing this challenge, you will only be considered for Team B**.
 
 This year we're combining a technical question with the GitHub platform so that we know you have some basic git knowledge. A lot of the CS Games competitions require git knowledge to submit your solutions.
 
