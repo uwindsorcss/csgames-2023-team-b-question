@@ -4,7 +4,8 @@ Thank you for taking this challenge! [CS Games](https://2023.csgames.org/) is an
 
 This year we're combining a technical question with the GitHub platform so that we know you have some basic git knowledge. A lot of the CS Games competitions require git knowledge to submit your solutions.
 
-Your final submission must be **pushed to this repository** by **November 30th at 11:59pm.** Be sure to also complete the application form!
+Your final submission must be **pushed to this repository** by **December 2nd at 11:59pm.**  
+Be sure to also complete the [application form](https://forms.office.com/r/R4A1JyB3Xf)!
 
 **NOTE - We will most likely be sending a Team B this year, however there is a very small chance that that will change depending on several circumstances such as registration numbers and competition rules **
 
@@ -16,6 +17,7 @@ Your solutions will be tested with many test cases. We will look at algorithm co
 
 Push your solutions to this repository on the master branch. You may use any programming language of your choosing. Please save the file that we should run as a file named `solution` (e.g. `solution.py`, `solution.c`).
 
+Next, **create a pull request** to lock in your submission, **explaining how your program works and how to run it**.
 
 # Question
 
