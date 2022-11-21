@@ -15,7 +15,7 @@ Your solutions will be tested with many test cases. We will look at algorithm co
 
 # Submitting
 
-Push your solutions to this repository on the master branch. You may use any programming language of your choosing. Please save the file that we should run as a file named `solution` (e.g. `solution.py`, `solution.c`).
+Fork this repository to your personal account, then push your solutions to your fork on the master branch. You may use any programming language of your choosing. Please save the file that we should run as a file named `solution` (e.g. `solution.py`, `solution.c`).
 
 Next, **create a pull request** to lock in your submission, **explaining how your program works and how to run it**.
 
