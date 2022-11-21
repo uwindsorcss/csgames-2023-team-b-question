@@ -1,8 +1,8 @@
-#o(n) solution
+#O(n) solution
 
 def calcProfit(stockPrices):
     # Initializing two pointers to go through the array in a single loop instead of 
-    # the double for-loops approach that I took in the brute force solution.'
+    # the double for-loops approach that I took in the brute force solution.
 
     # "first" checks the stock price, "second" checks the second price (selling price)
     first, second = 0, 1
