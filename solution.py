@@ -16,3 +16,12 @@ def max_stock_profit(stocks):
         
     else:
         return 0
+    
+stocks1 = [7,1,5,3,6,4]
+stocks2 = [7,6,4,3,1]
+
+if(max_stock_profit(stocks1) == 5):
+    print("Test 1 passed")
+
+if(max_stock_profit(stocks2) == 0):
+    print("Test 2 passed")
