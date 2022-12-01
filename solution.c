@@ -1,5 +1,5 @@
 #include <stdio.h>
-int findMinMax (int arr[], int n, int k);
+int findMin (int arr[], int n);
 int find_Max_Profit(int array[], int n);
 
 int max_p=0, min_p, max_v, min_v, max_profit=0;
