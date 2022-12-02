@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
@@ -135,7 +134,6 @@ This for loop will iterate through the array,
 taking the i'th element, and finding the max element after that.
 This will now be our baseline. By checking what our maximum value - our new found profit is , this gives us a number (LimitVal) that for any profit greater, the i'th element must be less than
 since we know we cant go higher than the maximuim value, and we need to make more than our profit. Thus, we can skip any number that is not less than the limitVal. 
-
 */
         for (int i = 0; i < ARR_LEN; i++){
 
