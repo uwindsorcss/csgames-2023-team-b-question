@@ -1,16 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
-#include <string.h>
 
-void arraySwitch(int array[], int size, int num); // Used to move the num'th item to the back of the array: array[], with size: size.
 
-void arraySwitch(int array[], int size, int num) {
+void arraySwitch(int array[], int size); // Used to move the num'th item to the back of the array: array[], with size: size.
 
-    for (int i = num; i < size - 1; i++) {
-        int tempVal = array[i];
+void arraySwitch(int array[], int size) {
+
+     for (int i = 0; i < size; i++) {
+        
         array[i] = array[i + 1];
-        array[i + 1] = tempVal;
+
     }
 }
 
@@ -25,8 +24,7 @@ int main(void)
     int maxProfit; // The maximum profit able to be obtained (Our output)
 
     int max = 0;
-    int buyIndex;
-    int sellIndex;
+    int buyIndex, sellIndex;
 
     int noProfitVal = 0;
     int gotProfitVal = 0;
@@ -94,7 +92,7 @@ int main(void)
 
         if (TmaxIndex == 0)  { // If the maximum value is first, we can remove it for the above reasons.
        
-            arraySwitch(stocks, ARR_LEN, 0); // Moves to the back of the array
+            arraySwitch(stocks, ARR_LEN); // Moves to the back of the array
             ARR_LEN--;                       // Reduces array size.
 
             additive++; // This is used to show the proper day to buy and sell.
@@ -160,10 +158,7 @@ int main(void)
         printf("Maximum Profits: %d. Buy Day %d, Sell Day %d\n", max, buyIndex + additive, sellIndex + additive);
     }
 
-    else { // If not, we output we have no maximum value.
     
-        printf("No profits are able to be obtained.\n");
-    }
 
     return 0;
 }
