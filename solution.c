@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
-#include <time.h>
+
 
 void arraySwitch(int array[], int size, int num); // Used to move the num'th item to the back of the array: array[], with size: size.
 
@@ -22,7 +22,8 @@ void arraySwitch(int array[], int size, int num)
 
 int main(void){
 
-    int stocks[100]; // The array we are using.
+
+    int stocks[160]; // The array we are using. - Max 160 Characters, 10 Chr Buffer.
 
     int i = 0;
     char stockChar; 
@@ -48,7 +49,13 @@ int main(void){
     }
 
 
-    while (stockChar != '\n'); // Continue to scan the integers as long as the character we scanned isnt a new line character.
+    while (stockChar != '\n' && i <= 150); // Stops accepting inputs once the new line character is found, or the user has exceeded 150 elements. 
+
+if(i >= 150){
+    printf("Too many elements were recieved. Please only enter 149 elements or less.");
+    exit(0); // Exits the code. 
+}    
+     // Continue to scan the integers as long as the character we scanned isnt a new line character.
 
     int ARR_LEN = i; // This will set out length to how many inputs were accepted. 
     int TminVal = stocks[0]; // The total Minimum Value
@@ -71,7 +78,7 @@ int main(void){
 
             if (stocks[i] > TmaxVal) // Maximum.
             {
-                
+
                 TmaxVal = stocks[i];
                 TmaxIndex = i;
             }
@@ -81,14 +88,14 @@ int main(void){
         
         if (TminIndex < TmaxIndex){ // If the max profit is plausible, break our code and output that. (Plausible if the min val is before the max value).
            
-            gotProfitVal = 1;
-            break;
+           printf("Maximum Profits: %d. Buy Day %d, Sell Day %d\n", maxProfit, TminIndex + additive, TmaxIndex + additive);
+            exit(0);
         }
 
         if (TminIndex == TmaxIndex){ // If the all values are equal - no profit is able to be obtained. Thus break and show that. 
             
-            noProfitVal = 1;
-            break;
+            printf("No profits are able to be obtained.\n");
+            exit(0);
         }
 
         if (TminIndex == ARR_LEN - 1) // If the minimum value is last in the array, we can simply remove it, as it can not be a possible option to make profit - since max needs to be after minimum.
@@ -118,16 +125,9 @@ int main(void){
         TmaxIndex = 0;
     }
     
-    if (noProfitVal == 1){ // If no profits are available 
-        printf("No profits are able to be obtained.\n");
-    }
+   
 
-    else if (gotProfitVal == 1){ // If the maximum profit is possible. 
-    
-        printf("Maximum Profits: %d. Buy Day %d, Sell Day %d\n", maxProfit, TminIndex + additive, TmaxIndex + additive);
-    }
-
-    else{ // If we dont have no profit and we dont have max profit - find the maximum possible profit. 
+   // Now we find the max value. 
 
 
 /*
@@ -171,14 +171,12 @@ since we know we cant go higher than the maximuim value, and we need to make mor
 
                 if (max == maxProfit) // If this profit is the maximum profit possible, we can break the loop and print it. 
                 {
-                    break;
+                    printf("Maximum Profits: %d. Buy Day %d, Sell Day %d\n", max, buyIndex + additive, sellIndex + additive);
+                    exit(0);
                 }
             }
 
-            if (max == maxProfit){ // Same thing as above comment, just breaks the loop again if max profit is our current profit. 
-                
-                break;
-            }
+            
         }
 
         if (max > 0){ // If we have found a maximum value, we can print it. 
@@ -190,9 +188,8 @@ since we know we cant go higher than the maximuim value, and we need to make mor
 
             printf("No profits are able to be obtained.\n");
         }
-    }
+    
 
-   
-
+ 
     return 0;
 }
