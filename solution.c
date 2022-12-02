@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
-#include <string.h>
+
 
 void arraySwitch(int array[], int size, int num); // Used to move the num'th item to the back of the array: array[], with size: size.
 
@@ -25,8 +24,7 @@ int main(void)
     int maxProfit; // The maximum profit able to be obtained (Our output)
 
     int max = 0;
-    int buyIndex;
-    int sellIndex;
+    int buyIndex, sellIndex;
 
     int noProfitVal = 0;
     int gotProfitVal = 0;
@@ -160,10 +158,7 @@ int main(void)
         printf("Maximum Profits: %d. Buy Day %d, Sell Day %d\n", max, buyIndex + additive, sellIndex + additive);
     }
 
-    else { // If not, we output we have no maximum value.
     
-        printf("No profits are able to be obtained.\n");
-    }
 
     return 0;
 }
