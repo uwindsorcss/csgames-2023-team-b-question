@@ -3,14 +3,17 @@
 PLEASE FILL IN THE FOLLOWING!
 
 ## Full Name
-John Johnson
+Aiden Asprakis
 
 ## UWindsor Email
-john.johnson@uwindsor.ca
+Asprakia@uwindsor.ca
 
 ## Application Form
-- [ ] I certify I have submitted the [application form](https://forms.office.com/r/R4A1JyB3Xf)
+- [Aiden Asprakis] I certify I have submitted the [application form](https://forms.office.com/r/R4A1JyB3Xf)
 
 ## Briefly explain how your solution works and how to run it 
 
-My solution...
+-I scan my input by checking for spaces to determine which position the next number fits into the array
+-then I set a baseline by checking profits with every value
+-if there is another value less then my base, set it as the base and check for bigger profits, continue for every value
+-the print the results
