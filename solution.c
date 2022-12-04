@@ -36,9 +36,18 @@ void bestBuy(int list[], int length){
 }
 
 int main(){
-
-  int arr[] = {7,1,5,3,6,4};
-  bestBuy(arr,5);
+  int length;
+  
+  printf("Enter number of days : ");
+  scanf("%d", &length);
+  int arr[length];
+  
+  for (int i = 0; i < length; i++){
+      printf("Enter day %d price :", i+1);
+      scanf("%d", &arr[i]);
+  }
+  bestBuy(arr,length);
+  
   
   return 0;
 
