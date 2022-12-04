@@ -22,20 +22,16 @@ int main() {
   // assume last element in the array is the max number in the array, and store it's potision
   max_v=array[n-1];
   max_p=n-1;
-  if (max_profit!=0){
-    printf("\nresult is %d\n",find_Max_Profit(array, n));
+  printf("\nresult is %d\n",find_Max_Profit(array, n));
 
-    for (int z=0; z<max_p; z++){
-      if (min_v==array[z] && z+1<max_p){
-        min_p=z+1;
-        break;
-      }
+  for (int z=0; z<max_p; z++){
+    if (min_v==array[z] && z+1<max_p){
+      min_p=z+1;
+      break;
     }
+  }
   
-    printf("Description: Buy on day %d (price = %d) and sell on day %d (price = %d), profit = %d-%d = %d. ",min_p,min_v,max_p,max_v,max_v,min_v,max_profit);
-    }
-  else
-    printf("no action should be taken.");
+  printf("Description: Buy on day %d (price = %d) and sell on day %d (price = %d), profit = %d-%d = %d. ",min_p,min_v,max_p,max_v,max_v,min_v,max_profit);
   
 }
 
